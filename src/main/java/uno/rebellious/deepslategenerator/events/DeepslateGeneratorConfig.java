@@ -17,7 +17,7 @@ public class DeepslateGeneratorConfig {
     static {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
         SERVER_BUILDER.comment("General settings").push(CATEGORY_GENERAL);
-        Y_LEVEL = SERVER_BUILDER.comment("Y Level below which Deepslate will generate from a cobblegen").push(SUBCATEGORY_Y_LEVEL).defineInRange("y_level", 15, 0, 256);
+        Y_LEVEL = SERVER_BUILDER.comment("Y Level below which Deepslate will generate from a cobblegen").push(SUBCATEGORY_Y_LEVEL).defineInRange("y_level", 0, -64, 320);
         SERVER_BUILDER.pop();
         SERVER_CONFIG = SERVER_BUILDER.build();
     }

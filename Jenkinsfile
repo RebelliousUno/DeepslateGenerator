@@ -4,7 +4,7 @@ pipeline {
         pollSCM 'H * * * *'
     }
     tools {
-        jdk 'JDK 16'
+        jdk 'JDK 17'
     }
     stages {
         stage('clean') {

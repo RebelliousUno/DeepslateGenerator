@@ -11,11 +11,12 @@ public class Events {
 
     @SubscribeEvent
     public static void cobbleGeneratorEvent(BlockEvent.FluidPlaceBlockEvent blockEvent) {
-        if (blockEvent.getState().getBlock() == Blocks.COBBLESTONE && blockEvent.getPos().getY() < DeepslateGeneratorConfig.Y_LEVEL.get() ) {
-            blockEvent.setNewState(Blocks.COBBLED_DEEPSLATE.defaultBlockState());
-        }
-        if (blockEvent.getState().getBlock() == Blocks.STONE && blockEvent.getPos().getY() < DeepslateGeneratorConfig.Y_LEVEL.get()) {
-            blockEvent.setNewState(Blocks.DEEPSLATE.defaultBlockState());
+        if (blockEvent.getPos().getY() < DeepslateGeneratorConfig.Y_LEVEL.get()) {
+            if (blockEvent.getState().getBlock() == Blocks.COBBLESTONE) {
+                blockEvent.setNewState(Blocks.COBBLED_DEEPSLATE.defaultBlockState());
+            } else if (blockEvent.getState().getBlock() == Blocks.STONE) {
+                blockEvent.setNewState(Blocks.DEEPSLATE.defaultBlockState());
+            }
         }
     }
 }

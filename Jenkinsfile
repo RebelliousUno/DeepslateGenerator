@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'cleaning'
                 withGradle {
-                    bat 'gradlew.bat clean'
+                    sh './gradlew clean'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'building'
                 withGradle {
-                    bat 'gradlew.bat build'
+                    sh './gradlew.bat build'
                 }
             }
         }       

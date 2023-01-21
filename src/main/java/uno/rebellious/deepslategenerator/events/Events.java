@@ -1,7 +1,7 @@
 package uno.rebellious.deepslategenerator.events;
 
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import uno.rebellious.deepslategenerator.DeepslateGenerator;
